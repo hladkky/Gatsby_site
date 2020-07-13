@@ -1,0 +1,46 @@
+{
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-rational-order"
+  ],
+  "plugins": [
+    "stylelint-order",
+    "stylelint-scss",
+    "stylelint-high-performance-animation",
+    "stylelint-declaration-use-variable"
+  ],
+  "rules": {
+    "no-empty-source": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
+    "plugin/no-low-performance-animation-properties": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
+    "sh-waqar/declaration-use-variable": [
+      ["/color/", "font-size", "font-family", "font-weight"]
+    ],
+    "order/properties-order": [],
+    "plugin/rational-order": [
+      true,
+      {
+        "border-in-box-model": false,
+        "empty-line-between-groups": false
+      }
+    ],
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignore": ["custom-elements"]
+      }
+    ],
+    "no-descending-specificity": true,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true
+  }
+}
