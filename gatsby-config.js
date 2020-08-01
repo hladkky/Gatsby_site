@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `site`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -29,6 +29,34 @@ module.exports = {
     },
     'gatsby-plugin-typescript',
     'gatsby-plugin-eslint',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    // {
+    //   resolve: 'gatsby-plugin-cockpit',
+    //   options: {
+    //     cockpitConfig: {
+    //       baseURL: 'http://dncapp.website:4040',
+    //       folder: '/cockpit',
+    //       accessToken: 'account-59e787c79461b3fc3dd4333613deb7',
+    //       collections: ['posts'],
+    //       regions: ['footer'],
+    //       customComponents: [],
+    //     },
+    //   },
+    // },
+    {
+      resolve: 'gatsby-source-cockpit',
+      options: {
+        host: 'http://dncapp.website:4040',
+        accessToken: 'f8c34eb5db84023850301213f7188d',
+        collectionName: ['Items'],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

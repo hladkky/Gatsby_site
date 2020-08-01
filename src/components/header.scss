@@ -1,0 +1,55 @@
+* {
+    --header-color-one: #dcdcdc;
+    --header-color-two: #767676;
+    --header-color-three: white;
+    --header-color-four: #777777;
+}
+.logoWithName{
+    background-color: var(--header-color-one);
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+}
+.companyName {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.name {
+    margin-top: 5px;
+    font-size: 30px;
+    font-weight: 400;
+}
+.companySlogan {
+    font-size: small;
+}
+.logo {
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+}
+nav{
+    background-color: var(--header-color-four);
+}
+.nav {
+    background-color: var(--header-color-two);
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+}
+.divider {
+    width: 100%;
+    background-color: var(--header-color-three);
+    height: 2px;
+    margin: 10px 0;
+}
+.navLink {
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+};
+.navLink:hover {
+    border-bottom: 3px solid white;
+}

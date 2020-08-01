@@ -1,0 +1,15 @@
+.slider {
+  position: relative;
+}
+
+.leftarr {
+  position: absolute;
+  top: 40px;
+  left: 10%;
+}
+
+.rightarr {
+  position: absolute;
+  top: 40px;
+  right: 10%;
+}

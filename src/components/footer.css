@@ -1,0 +1,24 @@
+.footer {
+  background-color: #777777;
+}
+
+.navFooter {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navFooter > .navLink {
+  text-decoration: underline;
+  font-size: small;
+}
+
+.companyC {
+  color: white;
+  font-size: small;
+  margin-left: 10%;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
