@@ -35,8 +35,8 @@ module.exports = {
       options: {
         token: 'f8c34eb5db84023850301213f7188d',
         baseUrl: 'http://dncapp.website:4040',
-        locales: ['en'],
-        collections: ['Header'],
+        locales: [],
+        collections: ['Items', 'BackPhotos'],
       },
     },
     'gatsby-plugin-react-helmet',
@@ -52,6 +52,13 @@ module.exports = {
         theme_color: '#663399',
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: ['Lemonada:wght@300;500', 'Poppins:ital,wght@1,900'],
+        display: 'swap',
       },
     },
     'gatsby-plugin-typescript',

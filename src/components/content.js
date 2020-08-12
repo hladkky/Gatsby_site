@@ -21,10 +21,10 @@ const Content = () => {
 
   return (
     <main>
-      <div className="path">path</div>
+      <div className="path">/path/</div>
       <ul className="listofclasses">
         {classes.map(cl => {
-          return <li>{cl}</li>;
+          return <li key={cl}>{cl}</li>;
         })}
       </ul>
       <About />

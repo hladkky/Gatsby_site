@@ -1,15 +1,42 @@
+.active {
+  display: block;
+  animation: appear 1s ease-out;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.passive {
+  display: none;
+}
+
+img {
+  margin-bottom: 0 !important;
+}
+
 .slider {
   position: relative;
 }
 
 .leftarr {
   position: absolute;
-  top: 40px;
+  top: 50%;
   left: 10%;
+  right: auto;
+  transform: translate(0, -30.5px);
+  cursor: pointer;
 }
 
 .rightarr {
   position: absolute;
-  top: 40px;
+  top: 50%;
+  left: auto;
   right: 10%;
+  transform: translate(0, -30.5px);
+  cursor: pointer;
 }

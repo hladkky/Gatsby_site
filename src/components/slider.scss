@@ -1,14 +1,31 @@
+@mixin arrow($left, $right) {
+  position: absolute;
+  top: 50%;
+  left: $left;
+  right: $right;
+  transform: translate(0, -30.5px);
+  cursor: pointer;
+}
+.active {
+  display: block;
+  animation: appear 1s ease-out;
+}
+@keyframes appear {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.passive {
+  display: none;
+}
+img {
+  margin-bottom: 0 !important;
+}
 .slider {
   position: relative;
-  height: 180px;
 }
 .leftarr {
-  position: absolute;
-  top: 90px;
-  left: 10%;
+  @include arrow(10%, auto);
 }
 .rightarr {
-  position: absolute;
-  top: 90px;
-  right: 10%;
+  @include arrow(auto, 10%);
 }

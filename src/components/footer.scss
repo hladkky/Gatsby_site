@@ -1,6 +1,9 @@
 .footer {
   background-color: #777777;
 }
+.pre {
+  white-space: pre-wrap;
+}
 .navFooter {
   display: flex;
   flex-direction: column;
@@ -9,6 +12,7 @@
   padding-bottom: 20px;
 }
 .navFooter > .navLink {
+  color: white;
   text-decoration:underline;
   font-size: small;
 }

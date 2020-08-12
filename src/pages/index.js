@@ -8,7 +8,7 @@ import Header from '../components/header';
 import Content from '../components/content';
 import Footer from '../components/footer';
 
-const IndexPage = ({ data }) => (
+const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Header />
@@ -19,12 +19,3 @@ const IndexPage = ({ data }) => (
 );
 
 export default IndexPage;
-
-// export const query = graphql`
-//   query HomeQuery {
-//     page(slug: { eq: "home" }) {
-//       title
-//       content
-//     }
-//   }
-// `;
