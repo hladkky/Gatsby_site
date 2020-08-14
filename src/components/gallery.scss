@@ -1,0 +1,33 @@
+.gallery {
+  display: flex;
+}
+.galleryItem {
+  background-color: #dcdcdc;
+  width: 50%;
+  margin: 5px;
+  padding: 10px;
+}
+.itemPhoto {
+  width: 100%;
+}
+h3 {
+  margin: 0;
+}
+.priceAndBusket {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.numOfPages {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: #777777;;
+  div {
+    margin: 0;
+    width: 20px;
+  }
+  .big {
+    font-size: 150%;
+  }
+}

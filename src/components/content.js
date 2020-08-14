@@ -2,6 +2,7 @@ import React from 'react';
 
 import './content.css';
 import About from './about';
+import Gallery from './gallery';
 
 const Content = () => {
   const items = [
@@ -27,6 +28,7 @@ const Content = () => {
           return <li key={cl}>{cl}</li>;
         })}
       </ul>
+      <Gallery />
       <About />
     </main>
   );

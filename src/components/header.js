@@ -6,23 +6,6 @@ import NavLink from './navLink';
 import './header.css';
 
 const Header = ({ siteTitle }) => {
-  const data = useStaticQuery(graphql`
-    query myQuery {
-      allCockpitItems {
-        nodes {
-          Price {
-            value
-          }
-          id
-        }
-      }
-    }
-  `);
-
-  const {
-    allCockpitItems: { nodes: items },
-  } = data;
-  console.log(items);
 
   const Naming = 'Company\nName';
 

@@ -38,6 +38,7 @@
 }
 
 nav {
+  width: 100%;
   background-color: var(--header-color-four);
 }
 
