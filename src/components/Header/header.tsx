@@ -1,13 +1,27 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import PropTypes from 'prop-types';
 import NavLink from './navLink';
 
-import './header.css';
+import './header.scss';
 
-const Header = ({ siteTitle }) => {
-
+const Header = () => {
   const Naming = 'Company\nName';
+
+  const data = useStaticQuery(graphql`
+    query getMenu {
+      allCockpitMenu {
+        nodes {
+          Name {
+            value
+          }
+        }
+      }
+    }`
+  );
+
+  const {
+    allCockpitMenu: { nodes: items },
+  } = data;
 
   return (
     <header>
@@ -20,27 +34,19 @@ const Header = ({ siteTitle }) => {
       </div>
       <nav>
         <div className="navHeader">
-          <NavLink to="/home">Главная</NavLink>
+          <NavLink to="/home">{items[0].Name.value}</NavLink>
           <div className="divider"></div>
-          <NavLink to="/catalog">Каталог</NavLink>
+          <NavLink to="/catalog">{items[1].Name.value}</NavLink>
           <div className="divider"></div>
-          <NavLink to="/delivery&payment">Доставка и оплата</NavLink>
+          <NavLink to="/delivery&payment">{items[2].Name.value}</NavLink>
           <div className="divider"></div>
-          <NavLink to="/pricelist">Прайс-лист</NavLink>
+          <NavLink to="/pricelist">{items[3].Name.value}</NavLink>
           <div className="divider"></div>
-          <NavLink to="/contacts">Контакты</NavLink>
+          <NavLink to="/contacts">{items[4].Name.value}</NavLink>
         </div>
       </nav>
     </header>
   );
-};
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: '',
 };
 
 export default Header;

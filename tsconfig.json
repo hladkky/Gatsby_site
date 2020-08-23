@@ -15,5 +15,5 @@
     "removeComments": false,
     "preserveConstEnums": true
   },
-  "include": ["./src/**/*", "commitlint.config.js"]
+  "include": ["./src/**/*", "commitlint.config.js", "import-png.d.ts"]
 }

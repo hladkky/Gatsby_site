@@ -9,8 +9,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Header from './header';
-import Slider from './slider';
 import './layout.css';
 
 const Layout = ({ children }) => <>{children}</>;

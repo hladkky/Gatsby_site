@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import leftArrow from './../images/leftarrow.png';
-import rightArrow from './../images/rightarrow.png';
-import main from './../images/main.png';
+import leftArrow from './../../images/leftarrow.png';
+import rightArrow from './../../images/rightarrow.png';
 
-import './slider.css';
+import './slider.scss';
 
 const Slider = () => {
   const data = useStaticQuery(graphql`
@@ -24,7 +23,7 @@ const Slider = () => {
   const {
     allCockpitBackPhotos: { nodes: src },
   } = data;
-  const photos = src.map(({ source }) => source.value.url);
+  const photos = src.map(({ source }: any) => source.value.url);
 
   const [curUrl, setCurUrl] = useState(photos[0]);
 
@@ -35,12 +34,12 @@ const Slider = () => {
   const nextPhoto = useCallback(() => {
     const curIndex = photos.indexOf(curUrl);
     setCurUrl(curIndex < photos.length - 1 ? photos[curIndex + 1] : photos[0]);
-  });
+  }, []);
 
   return (
     <div className="slider">
       <div className="imageContainer">
-        {photos.map(url => (
+        {photos.map((url: any) => (
           <img
             key={url}
             className={url === curUrl ? 'active' : 'passive'}

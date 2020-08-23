@@ -36,7 +36,7 @@ module.exports = {
         token: 'f8c34eb5db84023850301213f7188d',
         baseUrl: 'http://dncapp.website:4040',
         locales: [],
-        collections: ['Items', 'BackPhotos'],
+        collections: ['Items', 'BackPhotos', 'About', 'Menu', 'Goods', 'Footer'],
       },
     },
     'gatsby-plugin-react-helmet',
@@ -63,6 +63,7 @@ module.exports = {
     },
     'gatsby-plugin-typescript',
     'gatsby-plugin-eslint',
+    'gatsby-plugin-sass',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
