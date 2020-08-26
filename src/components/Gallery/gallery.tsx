@@ -2,34 +2,35 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import GalleryItem from './galleryitem';
 
+import {IMainItem, IItemInfo} from './CommonTypes';
 import './gallery.scss';
 
-const Gallery = () => {
-  const data = useStaticQuery(graphql`
-    query getItems {
-      allCockpitItems {
-        nodes {
-          Name {
-            value
-          }
-          Description {
-            value
-          }
-          Price {
-            value
-          }
-          Image {
-            value
-          }
-          id
+const GALLERY_ITEMS_QUERY = graphql`
+  query getItems {
+    data: allCockpitItems {
+      nodes {
+        Name {
+          value
         }
+        Description {
+          value
+        }
+        Price {
+          value
+        }
+        Image {
+          value
+        }
+        id
       }
     }
-  `);
+  }
+`;
 
+const Gallery = () => {
   const {
-    allCockpitItems: { nodes: items },
-  } = data;
+    data: { nodes: items },
+  }: IMainItem = useStaticQuery(GALLERY_ITEMS_QUERY);
 
   const numOfPages = 5;
   const curPage = 3;
@@ -37,13 +38,13 @@ const Gallery = () => {
   return (
     <>
       <div className="gallery">
-        {items.map((item: any) => (
+        {items.map(({Name: {value: name}, Description, Price: {value: price}, Image: {value: image}, id}) => (
           <GalleryItem
-            key={item.id}
-            name={item.Name.value}
-            description={item.Description}
-            price={item.Price.value}
-            image={item.Image.value}
+            key={id}
+            name={name}
+            description={Description}
+            price={price}
+            image={image}
           />
         ))}
       </div>

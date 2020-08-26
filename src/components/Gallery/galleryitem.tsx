@@ -2,8 +2,9 @@ import React from 'react';
 
 import './gallery.scss';
 import busket from './../../images/addtobasket_mini.png';
+import {IItemInfo} from './CommonTypes';
 
-const GalleryItem = ({ name, description, price, image }: any) => {
+const GalleryItem: React.FC<IItemInfo> = ({ name, description, price, image }) => {
   const startImgUrl = 'http://dncapp.website:4040/';
   const desc = description ? description.value : ' ';
 
@@ -14,6 +15,9 @@ const GalleryItem = ({ name, description, price, image }: any) => {
       <div className="priceAndBusket">
         <h3>{price}</h3>
         <img src={busket}></img>
+      </div>
+      <div className='description'>
+        {desc}
       </div>
     </div>
   );

@@ -1,30 +1,31 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-
+import { IMainAbout } from './CommonTypes';
 import './about.scss';
 
 const About = () => {
-
   const data = useStaticQuery(graphql`
     query getAbout {
-      allCockpitAbout {
+      data: allCockpitAbout {
         nodes {
           Text {
             value
           }
         }
       }
-    }`
-  );
+    }
+  `);
 
   const {
-    allCockpitAbout: { nodes: items },
-  } = data;
+    data: { nodes: items },
+  }: IMainAbout = data;
 
   return (
     <div className="about">
       <div className="aboutDivider"></div>
-      {items.map((item: any) => <p key={item.Text.value}>{item.Text.value}</p>)}
+      {items.map(({Text: {value}}) => (
+        <p key={value}>{value}</p>
+      ))}
     </div>
   );
 };

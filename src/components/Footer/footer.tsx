@@ -5,7 +5,6 @@ import NavLink from './../Header/navLink';
 import './footer.scss';
 
 const Footer = () => {
-
   const data = useStaticQuery(graphql`
     query getFooter {
       allCockpitFooter {
@@ -22,8 +21,8 @@ const Footer = () => {
           }
         }
       }
-    }`
-  );
+    }
+  `);
 
   const {
     allCockpitFooter: { nodes: footerText },
@@ -41,7 +40,11 @@ const Footer = () => {
         <NavLink to="/pricelist">{menuItems[3].Name.value}</NavLink>
         <NavLink to="/contacts">{menuItems[4].Name.value}</NavLink>
       </div>
-      {footerText.map((item: any) => <p className='companyC' key={item.Text.value}>{item.Text.value}</p>)}
+      {footerText.map((item: any) => (
+        <p className="companyC" key={item.Text.value}>
+          {item.Text.value}
+        </p>
+      ))}
     </div>
   );
 };
