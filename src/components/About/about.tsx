@@ -21,12 +21,14 @@ const About = () => {
   }: IMainAbout = data;
 
   return (
-    <div className="about">
+    <>
       <div className="aboutDivider"></div>
-      {items.map(({Text: {value}}) => (
-        <p key={value}>{value}</p>
-      ))}
-    </div>
+      <div className="about">
+        {items.map(({ Text: { value } }) => (
+          <p key={value}>{value}</p>
+        ))}
+      </div>
+    </>
   );
 };
 

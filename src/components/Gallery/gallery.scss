@@ -1,9 +1,11 @@
-.gallery {
+.items {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
 }
 .galleryItem {
   background-color: #dcdcdc;
-  width: 50%;
+  width: 200px;
   margin: 5px;
   padding: 10px;
 }

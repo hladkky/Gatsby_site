@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import GalleryItem from './galleryitem';
 
-import {IMainItem, IItemInfo} from './CommonTypes';
+import { IMainItem, IItemInfo } from './CommonTypes';
 import './gallery.scss';
 
 const GALLERY_ITEMS_QUERY = graphql`
@@ -36,17 +36,25 @@ const Gallery = () => {
   const curPage = 3;
 
   return (
-    <>
-      <div className="gallery">
-        {items.map(({Name: {value: name}, Description, Price: {value: price}, Image: {value: image}, id}) => (
-          <GalleryItem
-            key={id}
-            name={name}
-            description={Description}
-            price={price}
-            image={image}
-          />
-        ))}
+    <div className="gallery">
+      <div className="items">
+        {items.map(
+          ({
+            Name: { value: name },
+            Description,
+            Price: { value: price },
+            Image: { value: image },
+            id,
+          }) => (
+            <GalleryItem
+              key={id}
+              name={name}
+              description={Description}
+              price={price}
+              image={image}
+            />
+          ),
+        )}
       </div>
       <div className="numOfPages">
         {[...Array(numOfPages).keys()].map(n => (
@@ -55,7 +63,7 @@ const Gallery = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,6 +1,10 @@
 .about {
-  width: 90%;
-  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+p {
+  width: 45%;
 }
 .aboutDivider {
   height: 2px;

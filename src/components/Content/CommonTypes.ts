@@ -1,9 +1,9 @@
 export interface IMainContent {
   data: {
-    nodes: IContent[]
+    nodes: IContent[];
   };
 }
 
 interface IContent {
-  Class: {value: string}
+  Class: { value: string };
 }

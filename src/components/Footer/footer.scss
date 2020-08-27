@@ -1,5 +1,11 @@
 .footer {
   background-color: #777777;
+  padding: 0 15%;
+  display: flex;
+}
+.companyInfo {
+  padding-top: 20px;
+  width: 300px;
 }
 .pre {
   white-space: pre-wrap;
@@ -7,19 +13,17 @@
 .navFooter {
   display: flex;
   flex-direction: column;
-  margin-left: 10%;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-.navFooter > .navLink {
-  color: white;
-  text-decoration:underline;
-  font-size: small;
+
+  .navLink {
+    color: white;
+    text-decoration:underline;
+    font-size: small;
+  }
 }
 .companyC {
+  width: 100%;
   color: white;
   font-size: small;
-  margin-left: 10%;
-  margin-bottom: 0;
-  padding-bottom: 20px;
 }

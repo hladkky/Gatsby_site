@@ -26,12 +26,14 @@ const Content = () => {
   return (
     <main>
       <div className="path">/path/</div>
-      <ul className="listofclasses">
-        {items.map(({Class: {value}}) => {
-          return <li key={value}>{value}</li>;
-        })}
-      </ul>
-      <Gallery />
+      <div className="goods">
+        <ul className="listofclasses">
+          {items.map(({ Class: { value } }) => {
+            return <li key={value}>{value}</li>;
+          })}
+        </ul>
+        <Gallery />
+      </div>
       <About />
     </main>
   );

@@ -43,6 +43,7 @@ module.exports = {
           'Menu',
           'Goods',
           'Footer',
+          'Phone',
         ],
       },
     },

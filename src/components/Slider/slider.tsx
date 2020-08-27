@@ -31,10 +31,10 @@ const Slider = () => {
     const curIndex = photos.indexOf(curUrl);
     setCurUrl(curIndex > 0 ? photos[curIndex - 1] : photos.slice(-1)[0]);
   };
-  const nextPhoto = useCallback(() => {
+  const nextPhoto = () => {
     const curIndex = photos.indexOf(curUrl);
     setCurUrl(curIndex < photos.length - 1 ? photos[curIndex + 1] : photos[0]);
-  }, []);
+  };
 
   return (
     <div className="slider">

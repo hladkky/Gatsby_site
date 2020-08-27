@@ -4,10 +4,18 @@
     --header-color-three: white;
     --header-color-four: #777777;
 }
-.logoWithName{
+.top {
     background-color: var(--header-color-one);
     display: flex;
     padding: 20px;
+    flex-direction: row;
+    padding: 0 15%;
+    height: 230px;
+    align-items: center;
+    justify-content: space-between;
+}
+.logoWithName {
+    display: flex;
     flex-direction: row;
 }
 .companyName {
@@ -30,39 +38,43 @@
     width: 100px;
     background-color: gray;
 }
-nav{
-    width: 100%;
-    background-color: var(--header-color-four);
+.backConnect {
+    text-align: end;
+    span {
+        border-bottom: 2px black dashed;
+    }
 }
-.navHeader {
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: var(--header-color-two);
-    display: flex;
-    flex-direction: column;
+nav{
+    height: 80px;
+    padding: 0 17.5%;
+    background-color: var(--header-color-four);
+    vertical-align: auto;
 }
 .divider {
     margin: 10px;
     background-color: var(--header-color-three);
-    height: 2px;
+    height: 40px;
+    width: 2px;
 }
-.navHeader>.navLink {
-    margin-left: 10px;
-    font-size: 12px;
-    color: white;
-    text-decoration: none;
-};
-.navHeader>.navLink::after {
-    display: block;
-    margin-right: 10px;
-    content: '';
-    border-bottom: solid 2px white;
-    opacity: 0;
+.navHeader {
+    background-color: var(--header-color-two);
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    .navLink {
+        color: white;
+        text-decoration: none;
+    };
+    .navLink::after {
+        display: block;
+        content: '';
+        border-bottom: solid 2px white;
+        opacity: 0;
+    }
+    .navLink:hover::after {
+        opacity: 1;
+    }
 }
-.navHeader>.navLink:hover::after {
-    opacity: 1;
-}
-// .navLink:hover {
-//     border-bottom: 3px solid white;
-// }

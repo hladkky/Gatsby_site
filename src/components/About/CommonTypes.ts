@@ -1,9 +1,9 @@
 export interface IMainAbout {
   data: {
-    nodes: IAbout[]
+    nodes: IAbout[];
   };
 }
 
 interface IAbout {
-  Text: {value: string}
+  Text: { value: string };
 }
