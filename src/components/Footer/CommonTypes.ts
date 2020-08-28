@@ -14,7 +14,7 @@ interface IMainFooterInfo {
 interface IFooterInfo {
   Text: {
     value: string;
-  }
+  };
 }
 
 interface IMenuLabel {

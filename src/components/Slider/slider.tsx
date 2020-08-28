@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import leftArrow from './../../images/leftarrow.png';
 import rightArrow from './../../images/rightarrow.png';

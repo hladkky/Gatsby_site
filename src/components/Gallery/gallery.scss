@@ -1,38 +1,61 @@
-.items {
+@import "./../main.scss";
+
+@mixin gridGalleryItems($cols, $margin, $padding) {
+  margin-right: $margin;
+  margin-bottom: $margin;
+  background-color: var(--header-top-color);
+  float: left;
+  padding: $padding;
+  width: (100% - ($cols - 1)*$margin)/$cols - 2*$padding;
+
+  &:nth-child(#{$cols}n) {
+    margin-right: 0;
+  }
+}
+.gallery {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-.galleryItem {
-  background-color: #dcdcdc;
-  width: 200px;
-  margin: 5px;
-  padding: 10px;
-}
-.itemPhoto {
-  width: 100%;
-}
-h3 {
-  margin: 0;
-}
-.priceAndBusket {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.description {
-  margin-top: 10px;
-  height: 30px;
-  text-overflow: ellipsis;
+
+  .items {
+    display: block;
+    width: 100%;
+    float: left;
+
+    .galleryItem {
+      @include gridGalleryItems(3, 2%, 1%);
+    }
+
+    h3 {
+      margin: 0;
+    }
+
+    .itemPhoto {
+      width: 100%;
+    }
+
+    .priceAndBusket {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .description {
+      margin-top: 10px;
+      height: 30px;
+      text-overflow: ellipsis;
+    }
+  }
 }
 .numOfPages {
   display: flex;
+  width: 100%;
   justify-content: center;
   margin-bottom: 10px;
-  color: #777777;;
+  color: var(--header-nav-color-light);
   div {
     margin: 0;
     width: 20px;
+    text-align: center;
+    cursor: pointer;
   }
   .big {
     font-size: 150%;

@@ -1,5 +1,5 @@
 .footer {
-  background-color: #777777;
+  background-color: var(--header-nav-color-light);
   padding: 0 15%;
   display: flex;
 }
@@ -17,13 +17,13 @@
   padding-bottom: 20px;
 
   .navLink {
-    color: white;
+    color: var(--header-nav-text-color);
     text-decoration:underline;
     font-size: small;
   }
 }
 .companyC {
   width: 100%;
-  color: white;
+  color: var(--header-nav-text-color);
   font-size: small;
 }

@@ -29,7 +29,7 @@ const Header = () => {
 
   const {
     dataMenu: { nodes: items },
-    dataPhones: {nodes: phones}
+    dataPhones: { nodes: phones },
   }: IMainHeader = data;
 
   return (
@@ -44,7 +44,9 @@ const Header = () => {
         </div>
         <div className="phoneNumbers">
           {phones.map(({ Number: { value: num } }) => (
-            <div key={num} className='phoneNumber'>{num}</div>
+            <div key={num} className="phoneNumber">
+              {num}
+            </div>
           ))}
           <div className="backConnect">
             <span>Обратная связь</span>

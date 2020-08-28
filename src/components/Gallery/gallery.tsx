@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import GalleryItem from './galleryitem';
 
@@ -32,8 +32,8 @@ const Gallery = () => {
     data: { nodes: items },
   }: IMainItem = useStaticQuery(GALLERY_ITEMS_QUERY);
 
+  const [curPage, setCurPage] = useState(1);
   const numOfPages = 5;
-  const curPage = 3;
 
   return (
     <div className="gallery">
@@ -58,7 +58,9 @@ const Gallery = () => {
       </div>
       <div className="numOfPages">
         {[...Array(numOfPages).keys()].map(n => (
-          <div key={n} className={curPage === n + 1 ? 'big' : ''}>
+          <div key={n}
+               className={curPage === n + 1 ? 'big' : ''}
+               onClick={() => setCurPage(n+1)}>
             {n + 1}
           </div>
         ))}

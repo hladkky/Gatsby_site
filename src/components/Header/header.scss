@@ -1,11 +1,7 @@
-* {
-    --header-color-one: #dcdcdc;
-    --header-color-two: #767676;
-    --header-color-three: white;
-    --header-color-four: #777777;
-}
+@import "./../main.scss";
+
 .top {
-    background-color: var(--header-color-one);
+    background-color: var(--header-top-color);
     display: flex;
     padding: 20px;
     flex-direction: row;
@@ -44,20 +40,19 @@
         border-bottom: 2px black dashed;
     }
 }
-nav{
+nav {
     height: 80px;
     padding: 0 17.5%;
-    background-color: var(--header-color-four);
+    background-color: var(--header-nav-color-light);
     vertical-align: auto;
 }
 .divider {
     margin: 10px;
-    background-color: var(--header-color-three);
+    background-color: var(--header-nav-text-color);
     height: 40px;
     width: 2px;
 }
 .navHeader {
-    background-color: var(--header-color-two);
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -65,16 +60,18 @@ nav{
     justify-content: space-between;
 
     .navLink {
-        color: white;
+        color:  var(--header-nav-text-color);
         text-decoration: none;
+        
+        &:after {
+            display: block;
+            content: '';
+            border-bottom: solid 2px  var(--header-nav-text-color);
+            opacity: 0;
+        }
+
+        &:hover::after {
+            opacity: 1;
+        }
     };
-    .navLink::after {
-        display: block;
-        content: '';
-        border-bottom: solid 2px white;
-        opacity: 0;
-    }
-    .navLink:hover::after {
-        opacity: 1;
-    }
 }

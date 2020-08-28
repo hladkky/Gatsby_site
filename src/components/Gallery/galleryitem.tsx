@@ -21,7 +21,7 @@ const GalleryItem: React.FC<IItemInfo> = ({
         <h3>{price}</h3>
         <img src={busket}></img>
       </div>
-      <div className="description">{desc}</div>
+      <p className="description">{desc}</p>
     </div>
   );
 };

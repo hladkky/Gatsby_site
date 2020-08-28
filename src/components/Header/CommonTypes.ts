@@ -14,7 +14,7 @@ interface IMainPhone {
 interface IPhone {
   Number: {
     value: string;
-  }
+  };
 }
 
 interface IMenuLabel {
