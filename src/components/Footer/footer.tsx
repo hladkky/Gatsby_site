@@ -40,7 +40,9 @@ const Footer = () => {
       </div>
       <div className="navFooter">
         {menuItems.map(({ Name: { value } }) => (
-          <NavLink key={value} to={'/' + value}>{value}</NavLink>
+          <NavLink key={value} to={'/' + value}>
+            {value}
+          </NavLink>
         ))}
       </div>
     </div>

@@ -9,35 +9,40 @@
     height: 230px;
     align-items: center;
     justify-content: space-between;
-}
-.logoWithName {
-    display: flex;
-    flex-direction: row;
-}
-.companyName {
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.name {
-    margin-top: 5px;
-    font-size: 30px;
-    font-weight: 400;
-    white-space: pre-wrap;
-}
-.companySlogan {
-    font-size: small;
-}
-.logo {
-    height: 100px;
-    width: 100px;
-    background-color: gray;
-}
-.backConnect {
-    text-align: end;
-    span {
-        border-bottom: 2px black dashed;
+
+    .logoWithName {
+        display: flex;
+        flex-direction: row;
+    }
+    .companyName {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .name {
+        margin-top: 5px;
+        font-size: 30px;
+        font-weight: 400;
+        white-space: pre-wrap;
+    }
+    .companySlogan {
+        font-size: small;
+    }
+    .logo {
+        height: 100px;
+        width: 100px;
+        background-color: var(--logo-color);
+    }
+    .backConnect {
+        text-align: end;
+        span {
+            border-bottom: 2px black dashed;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
     }
 }
 nav {

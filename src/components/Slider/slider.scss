@@ -17,8 +17,8 @@
 .passive {
   display: none;
 }
-img {
-  margin-bottom: 0 !important;
+.active,.passive {
+  width: 100%;
 }
 .slider {
   position: relative;

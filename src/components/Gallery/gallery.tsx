@@ -58,9 +58,11 @@ const Gallery = () => {
       </div>
       <div className="numOfPages">
         {[...Array(numOfPages).keys()].map(n => (
-          <div key={n}
-               className={curPage === n + 1 ? 'big' : ''}
-               onClick={() => setCurPage(n+1)}>
+          <div
+            key={n}
+            className={curPage === n + 1 ? 'big' : ''}
+            onClick={() => setCurPage(n + 1)}
+          >
             {n + 1}
           </div>
         ))}

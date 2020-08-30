@@ -45,7 +45,7 @@ const Header = () => {
         <div className="phoneNumbers">
           {phones.map(({ Number: { value: num } }) => (
             <div key={num} className="phoneNumber">
-              {num}
+              <a href={`tel:${num}`}>{num}</a>
             </div>
           ))}
           <div className="backConnect">

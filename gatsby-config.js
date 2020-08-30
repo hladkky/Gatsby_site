@@ -27,7 +27,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'src',
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/src`,
       },
     },
     {
@@ -45,6 +45,15 @@ module.exports = {
           'Footer',
           'Phone',
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: 'CockpitItems',
+        imagePath: 'nodes[].Image',
+        name: 'statImg',
+        prepareUrl: url => `http://dncapp.website:4040/${url}`,
       },
     },
     'gatsby-plugin-react-helmet',
