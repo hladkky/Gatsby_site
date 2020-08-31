@@ -47,15 +47,15 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-remote-images`,
-      options: {
-        nodeType: 'CockpitItems',
-        imagePath: 'nodes[].Image',
-        name: 'statImg',
-        prepareUrl: url => `http://dncapp.website:4040/${url}`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-remote-images`,
+    //   options: {
+    //     nodeType: 'CockpitItems',
+    //     imagePath: 'nodes[].Image',
+    //     name: 'statImg',
+    //     prepareUrl: url => `http://dncapp.website:4040/${url}`,
+    //   },
+    // },
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',

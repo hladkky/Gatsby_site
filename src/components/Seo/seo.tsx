@@ -70,6 +70,6 @@ const SEO: React.FC<ISEO> = ({ description, lang, title }) => {
       ]}
     />
   );
-}
+};
 
 export default SEO;

@@ -15,14 +15,22 @@ interface IItem {
     value: number;
   };
   Image: {
-    value: URL;
+    value: {
+      childImageSharp: {
+        fluid: {
+          src: string;
+        }
+      }
+    }
   };
   id: string;
+  cockpitId: string;
 }
 
 export interface IItemInfo {
   name: string;
   description: { value: string } | undefined;
   price: number;
-  image: URL;
+  image: string;
+  path: string;
 }

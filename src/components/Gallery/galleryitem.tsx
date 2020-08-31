@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import './gallery.scss';
 import busket from './../../images/addtobasket_mini.png';
@@ -9,14 +10,14 @@ const GalleryItem: React.FC<IItemInfo> = ({
   description,
   price,
   image,
+  path
 }) => {
-  const startImgUrl = 'http://dncapp.website:4040/';
   const desc = description ? description.value : ' ';
 
   return (
     <div className="galleryItem">
-      <img className="itemPhoto" src={startImgUrl + image} />
-      <h6>{name}</h6>
+      <img className="itemPhoto" src={image} />
+      <h6><Link to={path}>{name}</Link></h6>
       <div className="priceAndBusket">
         <h3>{price}</h3>
         <img src={busket}></img>
