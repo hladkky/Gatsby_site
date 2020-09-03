@@ -1,0 +1,31 @@
+@mixin arrow($left, $right) {
+  position: absolute;
+  top: 50%;
+  left: $left;
+  right: $right;
+  transform: translate(0, -30.5px);
+  cursor: pointer;
+}
+.active {
+  display: block;
+  animation: appear 1s ease-out;
+}
+@keyframes appear {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.passive {
+  display: none;
+}
+.active,.passive {
+  width: 100%;
+}
+.slider {
+  position: relative;
+}
+.leftarr {
+  @include arrow(10%, auto);
+}
+.rightarr {
+  @include arrow(auto, 10%);
+}

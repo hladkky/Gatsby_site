@@ -1,5 +1,8 @@
+* {
+  font-family: 'Noto Sans', sans-serif;
+}
 html {
-  font-family: sans-serif;
+  font-family: monospace;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -92,7 +95,6 @@ svg:not(:root) {
 }
 code,
 kbd,
-pre,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
@@ -189,12 +191,6 @@ html {
   box-sizing: border-box;
   overflow-y: scroll;
 }
-* {
-  box-sizing: inherit;
-}
-*:before {
-  box-sizing: inherit;
-}
 *:after {
   box-sizing: inherit;
 }
@@ -218,7 +214,6 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 h1 {
   margin-left: 0;
@@ -395,19 +390,6 @@ figure {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-}
-pre {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: 1.45rem;
-  font-size: 0.85rem;
-  line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
-  overflow: auto;
-  word-wrap: normal;
-  padding: 1.45rem;
 }
 table {
   margin-left: 0;
@@ -598,22 +580,12 @@ code {
   padding-top: 0.2em;
   padding-bottom: 0.2em;
 }
-pre code {
-  background: none;
-  line-height: 1.42;
-}
 code:before,
 code:after,
 tt:before,
 tt:after {
   letter-spacing: -0.2em;
   content: " ";
-}
-pre code:before,
-pre code:after,
-pre tt:before,
-pre tt:after {
-  content: "";
 }
 @media only screen and (max-width: 480px) {
   html {

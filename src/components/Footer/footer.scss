@@ -1,0 +1,29 @@
+.footer {
+  background-color: var(--header-nav-color-light);
+  padding: 0 15%;
+  display: flex;
+}
+.companyInfo {
+  padding-top: 20px;
+  width: 300px;
+}
+.pre {
+  white-space: pre-wrap;
+}
+.navFooter {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .navLink {
+    color: var(--header-nav-text-color);
+    text-decoration:underline;
+    font-size: small;
+  }
+}
+.companyC {
+  width: 100%;
+  color: var(--header-nav-text-color);
+  font-size: small;
+}

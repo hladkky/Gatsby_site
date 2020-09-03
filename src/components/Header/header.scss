@@ -1,0 +1,82 @@
+@import "./../main.scss";
+
+.top {
+    background-color: var(--header-top-color);
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    padding: 0 15%;
+    height: 230px;
+    align-items: center;
+    justify-content: space-between;
+
+    .logoWithName {
+        display: flex;
+        flex-direction: row;
+    }
+    .companyName {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .name {
+        margin-top: 5px;
+        font-size: 30px;
+        font-weight: 400;
+        white-space: pre-wrap;
+    }
+    .companySlogan {
+        font-size: small;
+    }
+    .logo {
+        height: 100px;
+        width: 100px;
+        background-color: var(--logo-color);
+    }
+    .backConnect {
+        text-align: end;
+        span {
+            border-bottom: 2px black dashed;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+nav {
+    height: 80px;
+    padding: 0 17.5%;
+    background-color: var(--header-nav-color-light);
+    vertical-align: auto;
+}
+.divider {
+    margin: 10px;
+    background-color: var(--header-nav-text-color);
+    height: 40px;
+    width: 2px;
+}
+.navHeader {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    .navLink {
+        color:  var(--header-nav-text-color);
+        text-decoration: none;
+        
+        &:after {
+            display: block;
+            content: '';
+            border-bottom: solid 2px  var(--header-nav-text-color);
+            opacity: 0;
+        }
+
+        &:hover::after {
+            opacity: 1;
+        }
+    };
+}

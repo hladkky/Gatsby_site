@@ -1,0 +1,24 @@
+.path {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  height: 30px;
+}
+main {
+  margin: 0 15%;
+}
+.goods {
+  display: grid;
+  grid-template-columns: 200px auto;
+}
+.item {
+  font-size: medium;
+  cursor: pointer;
+}
+.item.curPath {
+  font-weight: bold;
+}
+.listofclasses {
+  margin: 0;
+  list-style-type: none;
+}
