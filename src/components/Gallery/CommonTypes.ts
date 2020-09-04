@@ -19,9 +19,9 @@ interface IItem {
       childImageSharp: {
         fluid: {
           src: string;
-        }
-      }
-    }
+        };
+      };
+    };
   };
   id: string;
   cockpitId: string;

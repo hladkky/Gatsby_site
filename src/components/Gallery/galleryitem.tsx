@@ -10,14 +10,16 @@ const GalleryItem: React.FC<IItemInfo> = ({
   description,
   price,
   image,
-  path
+  path,
 }) => {
   const desc = description ? description.value : ' ';
 
   return (
     <div className="galleryItem">
       <img className="itemPhoto" src={image} />
-      <h6><Link to={path}>{name}</Link></h6>
+      <h6>
+        <Link to={path}>{name}</Link>
+      </h6>
       <div className="priceAndBusket">
         <h3>{price}</h3>
         <img src={busket}></img>

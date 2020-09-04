@@ -50,9 +50,15 @@ const Gallery = () => {
             Name: { value: name },
             Description,
             Price: { value: price },
-            Image: { value: { childImageSharp: { fluid: { src: image }}}},
+            Image: {
+              value: {
+                childImageSharp: {
+                  fluid: { src: image },
+                },
+              },
+            },
             id,
-            cockpitId
+            cockpitId,
           }) => (
             <GalleryItem
               key={id}
