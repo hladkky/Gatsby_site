@@ -13,3 +13,12 @@ p {
   background-color: var(--header-nav-color-light);
   margin-bottom: 30px;
 }
+
+@media only screen and (max-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
+  p {
+    width: 100%;
+  }
+}

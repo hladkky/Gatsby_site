@@ -22,3 +22,9 @@ main {
   margin: 0;
   list-style-type: none;
 }
+@media only screen and (max-width: 768px) {
+  .goods {
+    display: flex;
+    flex-direction: column;
+  }
+}
