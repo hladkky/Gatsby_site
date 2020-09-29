@@ -1,6 +1,8 @@
 export interface IMainItem {
   data: {
-    nodes: IItem[];
+    allCockpitItems: {
+      nodes: IItem[];
+    };
   };
 }
 
@@ -24,13 +26,4 @@ interface IItem {
     };
   };
   id: string;
-  cockpitId: string;
-}
-
-export interface IItemInfo {
-  name: string;
-  description: { value: string } | undefined;
-  price: number;
-  image: string;
-  path: string;
 }

@@ -6,12 +6,19 @@
   background-color: var(--header-top-color);
   float: left;
   padding: $padding;
-  width: (100% - ($cols - 1)*$margin)/$cols - 2*$padding;
+  @if cols == 1 {
+    width: 100%;
+    margin-bottom: $margin;
+  } @else {
+    width: (100% - ($cols - 1)*$margin)/$cols - 2*$padding;
+  }
 
   &:nth-child(#{$cols}n) {
     margin-right: 0;
   }
 }
+
+
 .gallery {
   width: 100%;
 
@@ -21,7 +28,7 @@
     float: left;
 
     .galleryItem {
-      @include gridGalleryItems(3, 2%, 1%);
+      @include gridGalleryItems(3, 2%, 2%);
     }
 
     h3 {
@@ -43,6 +50,10 @@
       height: 30px;
       text-overflow: ellipsis;
     }
+
+    a {
+      color: inherit;
+    }
   }
 }
 .numOfPages {
@@ -59,5 +70,15 @@
   }
   .big {
     font-size: 150%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .gallery {
+    .items {
+      .galleryItem {
+        @include gridGalleryItems(1, 5%, 3%);
+      }
+    }
   }
 }

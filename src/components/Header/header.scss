@@ -45,6 +45,11 @@
         color: inherit;
     }
 }
+.reorder {
+    font-size: 3rem;
+    display: none;
+}
+
 nav {
     height: 80px;
     padding: 0 17.5%;
@@ -79,4 +84,45 @@ nav {
             opacity: 1;
         }
     };
+}
+
+@media only screen and (max-width: 768px) {
+    .top {
+        padding: 0 5%;
+    }
+    .reorder {
+        display: inline;
+        margin-right: 5%;
+    }
+    .phoneNumbers {
+        display: none;
+    }
+    nav {
+        display: none;
+        position: relative;
+
+        .navHeader{
+            display: none;
+        }
+    }
+    nav.responsive {
+        .navHeader.responsive {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+
+        .navLink {
+            margin: 10px 0;
+        }
+
+        .divider {
+            margin: 0;
+            background-color: var(--header-nav-text-color);
+            height: 2px;
+            width: 100%;
+            text-align: center;
+        }
+    }
 }

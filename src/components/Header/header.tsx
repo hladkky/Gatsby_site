@@ -1,9 +1,10 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import NavLink from './navLink';
 import { IMainHeader } from './CommonTypes';
 
 import './header.scss';
+import { MdReorder } from 'react-icons/md';
 
 const Header = () => {
   const Naming = 'Company\nName';
@@ -32,9 +33,13 @@ const Header = () => {
     dataPhones: { nodes: phones },
   }: IMainHeader = data;
 
+  const [navHeaderClassName, setNavHeaderClassName] = useState("navHeader");
+
   return (
     <header>
       <div className="top">
+        <MdReorder className='reorder'
+                   onClick={()=>{setNavHeaderClassName((navHeaderClassName === "navHeader") ? "navHeader responsive" : "navHeader")}}/>
         <div className="logoWithName">
           <div className="logo"></div>
           <div className="companyName">
@@ -53,8 +58,8 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <nav>
-        <div className="navHeader">
+      <nav className={navHeaderClassName}>
+        <div className={navHeaderClassName}>
           {items.map(({ Name: { value: name } }) => (
             <Fragment key={name}>
               <NavLink to={'/' + name}>{name}</NavLink>

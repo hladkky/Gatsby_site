@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import GalleryItem from './galleryitem';
 
-import { IMainItem, IItemInfo } from './CommonTypes';
+import { IMainItem } from './CommonTypes';
 import './gallery.scss';
 
 const GALLERY_ITEMS_QUERY = graphql`
@@ -19,9 +19,16 @@ const GALLERY_ITEMS_QUERY = graphql`
           value
         }
         Image {
-          value
+          value {
+            childImageSharp {
+              fluid {
+                src
+              }
+            }
+          }
         }
         id
+        cockpitId
       }
     }
   }
@@ -43,8 +50,15 @@ const Gallery = () => {
             Name: { value: name },
             Description,
             Price: { value: price },
-            Image: { value: image },
+            Image: {
+              value: {
+                childImageSharp: {
+                  fluid: { src: image },
+                },
+              },
+            },
             id,
+            cockpitId,
           }) => (
             <GalleryItem
               key={id}
@@ -52,6 +66,7 @@ const Gallery = () => {
               description={Description}
               price={price}
               image={image}
+              path={cockpitId}
             />
           ),
         )}
